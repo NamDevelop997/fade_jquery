@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show hide in jquery</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 200px;
+        background: red;
+        /* display: none; */
+      }
+      a{
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">box</div>
+
+    <a href="#" class="fadeIn">FadeIn</a>
+    <a href="#" class="fadeOut">FadeOut</a>
+    <a href="#" class="fadeToggle">FadeToggle</a>
+
+    <script src="./js/jquery.js"></script>
+
+    <script>
+      $(function () {
+        $(".fadeIn").click(function () {
+          $(".box").fadeIn(1000);
+        });
+
+        $(".fadeOut").click(function () {
+          $(".box").fadeOut(1000);
+        });
+
+        $(".fadeToggle").click(function () {
+          $(".box").fadeToggle(1000);
+        });
+      });
+    </script>
+  </body>
+</html>
